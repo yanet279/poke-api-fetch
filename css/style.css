@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+main {
+    position: relative;
+    padding: 50px 0;
+    background: rgba(85, 144, 189, 0.219);
+    background: linear-gradient(
+        90deg,
+        rgba(85, 144, 189, 0.39) 0%,
+        rgba(108, 183, 240, 0.219) 44%,
+        rgba(182, 216, 242, 0.185) 82%
+    );
+    z-index: 40;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Oswald", sans-serif;
+}
+
+.imagen-fondo {
+    left: 0;
+    right: 0;
+    background: url("../img/pexels-abhishek-rana-422784-4188296.jpg") no-repeat;
+    background-size: cover;
+    z-index: 0;
+    background-color: #1f1f25d3;
+    /* background-blend-mode: luminosity; */
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-family: "Aleo", serif;
+    text-shadow: 4px 5px 10px  #000000da;
+}
+
+.pokemon-container {
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.pokemon-block,
+.pokemon-block-back {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container {
+    background-image: url("./blob.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pokemon-block p {
+    margin: 5px;
+}
+
+.name {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.pagination {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 50px; */
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.stat-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flip-card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.pokemon-block,
+.pokemon-block-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%;
+}
+
+.stat-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+
+.stat-container p {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    margin-top: 13px;
+}
